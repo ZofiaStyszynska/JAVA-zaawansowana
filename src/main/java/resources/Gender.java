@@ -1,5 +1,5 @@
 package resources;
 
-public enum Genre {
+public enum Gender {
     MALE,FEMALE
 }
