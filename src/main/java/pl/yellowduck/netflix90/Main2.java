@@ -1,5 +1,6 @@
 package pl.yellowduck.netflix90;
 
+import lombok.Setter;
 import resources.*;
 
 import java.math.BigDecimal;
@@ -22,17 +23,30 @@ public class Main2 {
         persons.add(julietteActor);
         persons.add(gregActor);
 
-        for (int i = 0; i < persons.size() - 1; i++) {
-            Person person = persons.get(i);
+        for (Person person : persons) {
             person.introduce();
+
         }
+        Set<Actor> actors = new HashSet<>();
+        actors.add(tommyActor);
+        actors.add(julietteActor);
+        actors.add(gregActor);
+
+
+//        for (int i = 0; i < persons.size() - 1; i++) {
+//            Person person = persons.get(i);
+//            person.introduce();
+//        }
         VideoCassette theRoom = new VideoCassette(
                 "VID801",
                 BigDecimal.valueOf(28.0),
                 "The Room",
                 tommy,
                 Category.DRAMA,
-                Set.of(tommyActor,julietteActor,gregActor));
+                Set.of(tommyActor, julietteActor, gregActor));
+
+        theRoom.printOut();
+
     }
 
 

@@ -12,5 +12,8 @@ public abstract class Person {
     }
 
     public abstract void introduce();
-    }
+
+    public String toString() {
+        return firstName + " "+ lastName;
+    }}
 

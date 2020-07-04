@@ -21,4 +21,24 @@ public class VideoCassette {
 
 
     }
+
+    public void printOut() {
+        StringBuilder builder = new StringBuilder();
+        //   | ID | Title | Category | Director | Actors |
+        builder.append("| ")
+                .append(this.id)
+                .append(" | ")
+                .append(this.title)
+                .append(" | ")
+                .append(this.category)
+                .append(" | ")
+                .append(this.price)
+                .append(" | ")
+                .append(this.director.toString())
+                .append(" | ")
+                .append(this.actors.toString())
+                .append(" | ");
+        System.out.println(builder.toString());
+
+    }
 }
