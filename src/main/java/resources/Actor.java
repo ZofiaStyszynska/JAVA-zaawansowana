@@ -1,5 +1,8 @@
 package resources;
 
+import lombok.Getter;
+
+@Getter
 public class Actor extends Person {
 
 
@@ -17,10 +20,10 @@ public class Actor extends Person {
 //        }
         switch (this.gender) {
             case MALE:
-                System.out.println("My name is " + firstName + " " + lastName + ", I'm an actor");
+                System.out.println("My name is " + getFirstName() + " " + lastName + ", I'm an actor");
                 break;
             case FEMALE:
-                System.out.println("My name is " + firstName + " " + lastName + ", I'm an actress");
+                System.out.println("My name is " + getFirstName() + " " + lastName + ", I'm an actress");
                 break;
         }
 
@@ -28,6 +31,6 @@ public class Actor extends Person {
 
     @Override
     public String toString() {
-        return "aktor: " + firstName + " " + lastName;
+        return "aktor: " + getFirstName() + " " + lastName;
     }
 }

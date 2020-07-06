@@ -1,6 +1,6 @@
 package resources;
 
-public enum Category implements Discontable {
+public enum Category implements Discountable {
     COMEDY(0, "Funny films") {
         @Override
         public String toString() {

@@ -1,5 +1,8 @@
 package resources;
 
+import lombok.Getter;
+
+@Getter
 public class Director extends Person{
 
     public Director(String firstName, String lastName, Gender gender) {
@@ -7,12 +10,12 @@ public class Director extends Person{
     }
 
     public void introduce(){
-    System.out.println("My name is " + firstName + " " + lastName + ", I'm a director");
+    System.out.println("My name is " + getFirstName() + " " + lastName + ", I'm a director");
 }
 
     @Override
     public String toString() {
-        return firstName + " "+ lastName;
+        return getFirstName() + " "+ lastName;
     }
 
    }
