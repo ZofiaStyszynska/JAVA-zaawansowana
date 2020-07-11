@@ -1,4 +1,4 @@
-package Clients;
+package clients;
 
 import java.util.Scanner;
 
@@ -6,10 +6,10 @@ public class Client {
     private String firstName;
     private String lastName;
     private String gender;
-    ClientsAddress address;
-    ClientsCategory category;
+    private Address address;
+    private ClientsCategory category;
 
-    public Client(String firstName, String lastName, String gender, ClientsAddress address, ClientsCategory category) {
+    public Client(String firstName, String lastName, String gender, Address address, ClientsCategory category) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
