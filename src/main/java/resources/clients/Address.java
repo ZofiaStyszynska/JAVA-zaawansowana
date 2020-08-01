@@ -1,10 +1,13 @@
-package clients;
+package resources.clients;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+@Getter
 public class Address {
     private String cityName;
     private String streetName;
@@ -13,7 +16,8 @@ public class Address {
     private String postalCode;
     private static final String POSTALCODEPATTERN = "[0-9]{2}-[0-9]{3}";
 
-    private Address(String cityName, String streetName, int buildingNum, int apartmentNum, String postalCode) {
+    @JsonCreator
+    private Address(@JsonProperty("cityName") String cityName,@JsonProperty("streetName") String streetName,@JsonProperty("buildingNum") int buildingNum, @JsonProperty("apartmentNum") int apartmentNum, @JsonProperty("postalCode") String postalCode) {
         this.cityName = cityName;
         this.streetName = streetName;
         this.buildingNum = buildingNum;
@@ -50,5 +54,13 @@ public class Address {
         System.out.println(stringBuilder.toString());
     }
 
-
+    @Override
+    public String toString() {
+        return "Address:" +
+                "cityName='" + cityName + '\'' +
+                ", streetName='" + streetName + '\'' +
+                ", buildingNum=" + buildingNum +
+                ", apartmentNum=" + apartmentNum +
+                ", postalCode='" + postalCode + '\'';
+    }
 }

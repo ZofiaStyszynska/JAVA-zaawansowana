@@ -1,12 +1,15 @@
 package resources;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 
 @Getter
 public class Actor extends Person {
 
-
-    public Actor(String firstName, String lastName, Gender gender) {
+    @JsonCreator
+    public Actor(@JsonProperty("First name") String firstName,
+                 @JsonProperty("Last name") String lastName, @JsonProperty("Gender") Gender gender) {
         super(firstName, lastName, gender);
 
     }

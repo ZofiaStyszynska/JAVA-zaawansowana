@@ -36,4 +36,4 @@ public enum Category implements Discountable {
         return name () + description;
     }
 }
-//class Category extends Enum implements Discontable(){}
+//class Category extends Enum implements Discountable(){}

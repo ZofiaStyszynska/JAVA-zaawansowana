@@ -2,7 +2,6 @@ package resources;
 
 
 import org.junit.Test;
-import resources.*;
 
 import java.math.BigDecimal;
 import java.util.Set;
@@ -18,7 +17,7 @@ public class VideoCasetteCatalogTest {
         assertThat(catalog.getVideoCassettes()).isEmpty();
     }
     @Test
-    public void shouldAddVideoCassetteToCatalog(){
+    public void shouldAddVideoCassetteToCatalog() throws CassetteAddException {
         //given
         IVideoCassetteCatalog catalog = new VideoCasetteCatalog();
         VideoCassette videoCassette = new VideoCassette( "VID801",
@@ -28,13 +27,13 @@ public class VideoCasetteCatalogTest {
                 Category.DRAMA,
                 Set.of(new Actor("Brad", "Pitt", Gender.MALE)));
         //when
-        catalog.addVideoCassette(videoCassette);
+        catalog.addAllVideoCassette(videoCassette);
         //then
         assertThat(catalog.getVideoCassettes())
         .hasSize(1);
     }
     @Test
-    public void shouldAddMoreThanOneCassettesToTheCatalog(){
+    public void shouldAddMoreThanOneCassettesToTheCatalog() throws CassetteAddException {
         IVideoCassetteCatalog catalog = new VideoCasetteCatalog();
         VideoCassette videoCassette1 = new VideoCassette( "VID801",
                 BigDecimal.valueOf(28.0),
@@ -48,7 +47,7 @@ public class VideoCasetteCatalogTest {
                 new Director("Larry","Wachowski", Gender.MALE),
                 Category.DRAMA,
                 Set.of(new Actor("Keanu", "Reeves", Gender.MALE)));
-        catalog.addVideoCassette(videoCassette1, videoCassette2);
+        catalog.addAllVideoCassette(videoCassette1, videoCassette2);
         //catalog.addVideoCassette(videoCassette2);
         assertThat(catalog.getVideoCassettes())
                 .hasSize(2);

@@ -1,0 +1,2 @@
+{"firstName":"Joanna","lastName":"Jankowska","address":{"cityName":"Leszno","streetName":"Moniuszki","buildingNum":15,"apartmentNum":7,"postalCode":"76-015"},"category":"PREMIUM","clientsID":"C002"}
+{"firstName":"Joanna","lastName":"Jankowska","address":{"streetName":"Moniuszki","buildingNum":15,"apartmentNum":7,"postalCode":"76-015","cityName":"Leszno"},"category":"PREMIUM","clientsID":"C002"}

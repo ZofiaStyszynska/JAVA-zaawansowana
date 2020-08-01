@@ -1,7 +1,5 @@
 package resources;//Katalog dodaje i zwraca listę dostępnych video casette
 
-import resources.*;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,13 +27,13 @@ public class VideoCasetteCatalog implements IVideoCassetteCatalog{
 
 
     public void addVideoCassette(VideoCassette videoCassette) {
-        cassettes.add(video1);
+        cassettes.add(videoCassette);
     }
 
     @Override
-    public void addVideoCassette(VideoCassette... videoCassette) {
+    public void addAllVideoCassette(VideoCassette... videoCassette) {
         for (VideoCassette cassette : videoCassette) {
-            addVideoCassette(cassette);
+            addAllVideoCassette(cassette);
         }
 
 
